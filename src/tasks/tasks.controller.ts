@@ -3,14 +3,10 @@ import { TasksService } from "./tasks.service";
 
 @Controller({})
 export class TasksController{
-
-    tasksService: TasksService;
-
     /*
         The constructor is the first function of the module to be executed
     */
-    constructor(tasksService: TasksService){
-        this.tasksService = tasksService;
+    constructor(private tasksService: TasksService){
     }
 
     @Get('/tasks')
