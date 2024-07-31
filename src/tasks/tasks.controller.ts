@@ -23,7 +23,6 @@ export class TasksController{
     }
 
     @Post()
-    @UsePipes(new ValidationPipe())
     createTask(@Body() task: CreateTaskDto){
         return this.tasksService.createTask(task);
     }
